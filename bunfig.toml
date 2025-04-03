@@ -1,0 +1,20 @@
+logLevel = 'warn'
+telemetry = false
+
+# We're not using Bun's test runner
+# [test]
+# coverage = true
+
+[install]
+auto = 'disable'
+scopes.jsr = 'https://npm.jsr.io'
+saveTextLockfile = true
+
+[run]
+# Always use Bun's shell
+shell = 'bun'
+
+# Auto alias node to bun
+bun = true
+
+silent = true

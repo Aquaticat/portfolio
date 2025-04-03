@@ -1,3 +1,98 @@
-.siteHeader {
+/* Had to extend Bootstrap api to constrain characters per line. And more pet peeves. */
+@import url('./extended-bootstrap.scss') layer(bootstrap);
 
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: local(InterVariable), local(Inter), url('../assets/InterVariable.woff2') format('woff2');
+}
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: local(InterVariable), local(Inter), url('../assets/InterVariable-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: MonaspaceNe;
+  src: local(MonaspaceNe), url('../assets/MonaspaceNeonVarVF[wght\,wdth\,slnt].woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root, [data-bs-theme="light"] {
+  --bs-emphasis-color-rgb: var(--dark-lighter-rgb);
+  --bs-body-bg: var(--light);
+  --bs-box-shadow-sm: 0px 0px var(--blur-m) 0px var(--subtle-50);
+}
+
+:root {
+  --bs-font-sans-serif: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: MonaspaceNe, SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bs-nav-link-font-size: 1.25rem;
+
+  --light-lighter-rgb: 242, 236, 255;
+  --light-lighter: rgb(var(--light-lighter-rgb));
+  --light-rgb: 233, 223, 255;
+  --light: rgb(var(--light-rgb));
+  --light-50: rgba(var(--light-rgb), 0.5);
+  --dark-lighter-rgb: 24, 19, 34;
+  --dark-lighter: rgb(var(--dark-lighter-rgb));
+  --subtle-rgb:118, 112, 144;
+  --subtle: rgb(var(--subtle-rgb));
+  --subtle-50: rgba(var(--subtle-rgb), 0.5);
+  --primary-rgb:128,78,229;
+  --primary: rgb(var(--primary-rgb));
+  --primary-50-on-white: #bda2f1;
+
+  --blur-m: 0.5rem;
+  --blur-l: 1rem;
+
+  --blue-rgb: 0,0,255;
+  --blue: rgb(var(--blue-rgb));
+  --blue-10: rgba(var(--blue-rgb), 0.1);
+  --blue-0: rgba(var(--blue-rgb), 0);
+
+  --red-rgb: 255, 0, 0;
+  --red: rgb(var(--red-rgb));
+  --red-10: rgba(var(--red-rgb), 0.1);
+  --red-0: rgba(var(--red-rgb), 0);
+
+  --bs-white-rgb: var(--light-lighter-rgb);
+  --bs-white: rgb(var(--bs-white-rgb));
+  --bs-light-rgb: var(--light-rgb);
+  --bs-light: rgb(var(--bs-light-rgb));
+  --bs-primary-rgb: var(--primary-rgb);
+}
+
+.navbar-nav {
+  --bs-nav-link-font-weight: 500;
+}
+
+.navbar {
+  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-padding-x: 1rem;
+}
+
+.backdrop-filter-blur {
+  backdrop-filter: blur(calc(var(--blur-l) / 2));
+}
+
+.radial-gradients {
+  background-image: radial-gradient(25% 50% at 100% 0%, var(--blue-10) 0%, var(--blue-0) 100%), radial-gradient(25% 50% at 0% 100%, var(--red-10) 0%, var(--red-0) 100%);
+}
+
+.btn {
+  --bs-btn-padding-y: 0.75rem;
+}
+
+.bg-primary.bg-gradient {
+  --bs-gradient: linear-gradient(180deg, var(--primary-50-on-white) 0%, var(--primary) 100%);
+}
+
+.btn-primary {
+  --bs-btn-bg: none;
+  --bs-btn-border-color: var(--light-lighter);
 }
