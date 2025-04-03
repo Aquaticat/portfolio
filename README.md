@@ -14,3 +14,31 @@ JS is not included because it's not required.
 ### [Gutenberg](https://github.com/BafS/Gutenberg)
 
 So the page prints correctly.
+
+## To build & run locally
+
+### Install [Bun](https://bun.sh):
+
+(Linux/Mac)
+
+```sh
+curl -fsSL https://bun.sh/install | bash
+```
+
+(Windows)
+
+```powershell
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
+
+### Install dependencies
+
+```sh
+bun i
+```
+
+### Run vite
+
+```sh
+bun run vite
+```

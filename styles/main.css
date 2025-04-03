@@ -35,9 +35,13 @@
 
   --light-lighter-rgb: 242, 236, 255;
   --light-lighter: rgb(var(--light-lighter-rgb));
+  --light-lighter-0: rgba(var(--light-lighter-rgb), 0);
+  --light-lighter-50: rgba(var(--light-lighter-rgb), 0.5);
   --light-rgb: 233, 223, 255;
   --light: rgb(var(--light-rgb));
   --light-50: rgba(var(--light-rgb), 0.5);
+  --light-darker-rgb: 210, 200, 231;
+  --light-darker: rgb(var(--light-darker-rgb));
   --dark-lighter-rgb: 24, 19, 34;
   --dark-lighter: rgb(var(--dark-lighter-rgb));
   --subtle-rgb:118, 112, 144;
@@ -48,6 +52,7 @@
   --primary-50-on-white: #bda2f1;
 
   --blur-m: 0.5rem;
+  --blur-m-neg: -0.5rem;
   --blur-l: 1rem;
 
   --blue-rgb: 0,0,255;
@@ -95,4 +100,13 @@
 .btn-primary {
   --bs-btn-bg: none;
   --bs-btn-border-color: var(--light-lighter);
+}
+
+.card-img-overlay.bg-gradient {
+  --bs-gradient: linear-gradient(180deg, var(--light-lighter) 0%, var(--light-lighter-0) 100%);
+}
+
+.card {
+  --bs-card-bg: var(--light-lighter-50);
+  --bs-card-border-width: 0;
 }

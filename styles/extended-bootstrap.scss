@@ -34,6 +34,7 @@ $utilities: map.merge(
   (
     "max-inline-size": (
       property: max-inline-size,
+      class: max-inline-size,
       values: (
         text: 32rem,
         ui: 80rem,
@@ -41,6 +42,7 @@ $utilities: map.merge(
     ),
     "max-inline-size-var": (
       property: max-inline-size,
+      class: max-inline-size-var,
       css-variable-name: max-inline-size,
       values: (
         text: 32rem,
@@ -50,6 +52,7 @@ $utilities: map.merge(
     ),
     "min-inline-size": (
       property: min-inline-size,
+      class: min-inline-size,
       values: (
         text: 16rem,
         interactive: 3rem,
@@ -57,6 +60,7 @@ $utilities: map.merge(
     ),
     "min-inline-size-var": (
       property: min-inline-size,
+      class: min-inline-size-var,
       css-variable-name: min-inline-size,
       values: (
         text: 16rem,
@@ -66,12 +70,14 @@ $utilities: map.merge(
     ),
     "min-block-size": (
       property: min-block-size,
+      class: min-block-size,
       values: (
         interactive: 3rem,
       )
     ),
     "min-block-size-var": (
       property: min-block-size,
+      class: min-block-size-var,
       css-variable-name: min-block-size,
       values: (
         interactive: 3rem,
@@ -84,8 +90,24 @@ $utilities: map.merge(
         values: map.merge(
           map.get(map.get($utilities, "font-weight"), "values"),
           (extra-bold: 800),
-        ),
+        )
+      )
+    ),
+    "neumorphism": (
+      property: box-shadow,
+      class: neumorphism,
+      values: (
+        m: (var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter), var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--light-darker)),
+      )
+    ),
+    "neumorphism-var": (
+      property: box-shadow,
+      class: neumorphism-var,
+      css-variable-name: neumorphism,
+      values: (
+        m: (var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter), var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--light-darker)),
       ),
+      css-var: true,
     ),
   ),
 );
