@@ -15,6 +15,10 @@ JS is not included because it's not required.
 
 So the page prints correctly.
 
+### [Inter](https://rsms.me/inter)
+
+### [Monaspace Neon](https://monaspace.githubnext.com)
+
 ## To build & run locally
 
 ### Install [Bun](https://bun.sh):
@@ -44,3 +48,5 @@ bun run vite
 ```
 
 *I've never hated web dev so much.*
+
+## [Figma Design Share](https://www.figma.com/design/kbocALxI9u9E65K8XuFvvM/portfolio-2025APR08?node-id=0-1\&m=dev)

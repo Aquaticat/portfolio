@@ -171,3 +171,20 @@
   --bs-secondary-color: var(--subtle);
 }
 
+.card-img {
+  aspect-ratio: 1;
+  background-repeat: repeat;
+  object-fit: cover;
+}
+
+.linkedinLogo {
+  background-image: url('../images/linkedin.png');
+}
+
+.blueskyLogo {
+  background-image: url('../images/bluesky.png');
+}
+
+.dribbbleRender {
+  background-image: url('../images/dribbble.png');
+}
