@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | Aquaticat</title>
+  <link rel="stylesheet" href="./assets/gutenberg.min-ChVikPhl.css" media="print">
+  <link rel="shortcut icon" href="./assets/icon-C7yPxe1Z.svg" type="image/x-icon">
+
+  <!-- Font preloading -->
+  <link rel="preload" href="./assets/InterVariable-DiVDrmQJ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/InterVariable-Italic-FCBEiFp6.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/MonaspaceNeonVar-BM-VD-jK.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" crossorigin href="./assets/main-C14TEYN2.css">
+</head>
+
+<!-- radial-gradients is not included in Bootstrap -->
+
+<body class="radial-gradients">
+
+  <!-- no-print is a class used by the Gutenberg 3p stylesheet, signaling not to include the element when printing.
+   backdrop-filter-blur is not included in Bootstrap -->
+  <header class="siteHeader navbar bg-light bg-opacity-50 shadow-sm backdrop-filter-blur no-print">
+
+    <!-- Use relative links for GitHub Pages compatibility.
+     Add utility classes to get the desired styling without adding stuff to the navbar-brand class. -->
+    <a href="./" class="siteIdentity navbar-brand font-monospace d-flex gap-2 text-primary">
+      <img src="data:image/svg+xml,%3csvg%20width='1024'%20height='1024'%20viewBox='0%200%201024%201024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M512%200L1024%20512L512%201024L3.8147e-06%20512L512%200Z'%20fill='white'/%3e%3cpath%20d='M512%201024V512H1024L512%201024Z'%20fill='url(%23paint0_linear_17_1)'/%3e%3cpath%20d='M512%201024V512H0L512%201024Z'%20fill='url(%23paint1_linear_17_1)'/%3e%3cpath%20d='M512%201024V512H0L512%201024Z'%20fill='url(%23paint2_linear_17_1)'%20fill-opacity='0.5'/%3e%3cpath%20d='M512%200V512H0L512%200Z'%20fill='url(%23paint3_linear_17_1)'/%3e%3cpath%20d='M512%200V512H0L512%200Z'%20fill='url(%23paint4_linear_17_1)'%20fill-opacity='0.5'/%3e%3cpath%20d='M512%200V512H1024L512%200Z'%20fill='url(%23paint5_linear_17_1)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_17_1'%20x1='-8.00002'%20y1='1536'%20x2='1024'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0.304355'%20stop-color='%23C879F6'/%3e%3cstop%20offset='1'%20stop-color='%23CE87F7'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_17_1'%20x1='0'%20y1='1024'%20x2='512'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0.111899'%20stop-color='%23804DE5'/%3e%3cstop%20offset='0.28528'%20stop-color='%23804DE5'%20stop-opacity='0.9'/%3e%3cstop%20offset='1'%20stop-color='%23804DE5'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint2_linear_17_1'%20x1='1024'%20y1='-1.52588e-05'%20x2='6.10352e-05'%20y2='2048'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0.295332'%20stop-color='%23804DE6'/%3e%3cstop%20offset='0.49914'%20stop-color='%23804DE6'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint3_linear_17_1'%20x1='-1.52588e-05'%20y1='512'%20x2='512'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23AE75F0'/%3e%3cstop%20offset='1'%20stop-color='%23AE75F0'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint4_linear_17_1'%20x1='1024'%20y1='0'%20x2='-1.52588e-05'%20y2='512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23AE75F0'/%3e%3cstop%20offset='1'%20stop-color='%23AE75F0'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint5_linear_17_1'%20x1='512'%20y1='512'%20x2='1024'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23F0C2FF'/%3e%3cstop%20offset='1'%20stop-color='%23F2CCFF'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="octahedron with gradients" width="32">
+      Aquaticat
+    </a>
+    <nav class="siteLinks">
+      <ul class="navbar-nav flex-row gap-3">
+        <li class="nav-item flex-row">
+          <a class="siteLink__search nav-link active filter-drop-shadow-nav-link" href="./search">
+            Search
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_4134_372'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='24'%20height='24'%3e%3crect%20width='24'%20height='24'%20fill='%23181322'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_4134_372)'%3e%3cpath%20d='M19.6%2021L13.3%2014.7C12.8%2015.1%2012.225%2015.4167%2011.575%2015.65C10.925%2015.8833%2010.2333%2016%209.5%2016C7.68333%2016%206.14583%2015.3708%204.8875%2014.1125C3.62917%2012.8542%203%2011.3167%203%209.5C3%207.68333%203.62917%206.14583%204.8875%204.8875C6.14583%203.62917%207.68333%203%209.5%203C11.3167%203%2012.8542%203.62917%2014.1125%204.8875C15.3708%206.14583%2016%207.68333%2016%209.5C16%2010.2333%2015.8833%2010.925%2015.65%2011.575C15.4167%2012.225%2015.1%2012.8%2014.7%2013.3L21%2019.6L19.6%2021ZM9.5%2014C10.75%2014%2011.8125%2013.5625%2012.6875%2012.6875C13.5625%2011.8125%2014%2010.75%2014%209.5C14%208.25%2013.5625%207.1875%2012.6875%206.3125C11.8125%205.4375%2010.75%205%209.5%205C8.25%205%207.1875%205.4375%206.3125%206.3125C5.4375%207.1875%205%208.25%205%209.5C5%2010.75%205.4375%2011.8125%206.3125%2012.6875C7.1875%2013.5625%208.25%2014%209.5%2014Z'%20fill='%23181322'/%3e%3c/g%3e%3c/svg%3e" alt="">
+          </a>
+        </li>
+        <li class="nav-item flex-row">
+          <a class="siteLink__search nav-link" href="./about">
+            About
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_4134_668'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='24'%20height='24'%3e%3crect%20width='24'%20height='24'%20fill='%231C1B1F'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_4134_668)'%3e%3cpath%20d='M12%2012C10.9%2012%209.95833%2011.6083%209.175%2010.825C8.39167%2010.0417%208%209.1%208%208C8%206.9%208.39167%205.95833%209.175%205.175C9.95833%204.39167%2010.9%204%2012%204C13.1%204%2014.0417%204.39167%2014.825%205.175C15.6083%205.95833%2016%206.9%2016%208C16%209.1%2015.6083%2010.0417%2014.825%2010.825C14.0417%2011.6083%2013.1%2012%2012%2012ZM4%2020V17.2C4%2016.6333%204.14583%2016.1125%204.4375%2015.6375C4.72917%2015.1625%205.11667%2014.8%205.6%2014.55C6.63333%2014.0333%207.68333%2013.6458%208.75%2013.3875C9.81667%2013.1292%2010.9%2013%2012%2013C13.1%2013%2014.1833%2013.1292%2015.25%2013.3875C16.3167%2013.6458%2017.3667%2014.0333%2018.4%2014.55C18.8833%2014.8%2019.2708%2015.1625%2019.5625%2015.6375C19.8542%2016.1125%2020%2016.6333%2020%2017.2V20H4ZM6%2018H18V17.2C18%2017.0167%2017.9542%2016.85%2017.8625%2016.7C17.7708%2016.55%2017.65%2016.4333%2017.5%2016.35C16.6%2015.9%2015.6917%2015.5625%2014.775%2015.3375C13.8583%2015.1125%2012.9333%2015%2012%2015C11.0667%2015%2010.1417%2015.1125%209.225%2015.3375C8.30833%2015.5625%207.4%2015.9%206.5%2016.35C6.35%2016.4333%206.22917%2016.55%206.1375%2016.7C6.04583%2016.85%206%2017.0167%206%2017.2V18ZM12%2010C12.55%2010%2013.0208%209.80417%2013.4125%209.4125C13.8042%209.02083%2014%208.55%2014%208C14%207.45%2013.8042%206.97917%2013.4125%206.5875C13.0208%206.19583%2012.55%206%2012%206C11.45%206%2010.9792%206.19583%2010.5875%206.5875C10.1958%206.97917%2010%207.45%2010%208C10%208.55%2010.1958%209.02083%2010.5875%209.4125C10.9792%209.80417%2011.45%2010%2012%2010Z'%20fill='%23181322'/%3e%3c/g%3e%3c/svg%3e" alt="">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mb-3r">
+
+    <!-- Set correct padding.
+     Modify Bootstrap Sass map to add the right padding levels. -->
+    <section class="container-xxl hero grid align-items-start px-3 py-5 py-xl-6r gap-2r">
+      <div class="g-col-12 g-col-xl-6 d-flex flex-column align-items-center gap-2r">
+
+        <h1 class="max-inline-size-text min-inline-size-text fst-italic fw-extra-bold fs-1 text-center">Dive
+          <span class="highlight text-primary">into</span> the Archives
+        </h1>
+        <search class="container-xxl">
+          <label for="search" class="form-label fs-4 fw-bold">Search for tags, content...</label>
+          <input type="search" id="search"
+            class="form-control neumorphism-m-inset min-block-size-input fw-bold border-4 fs-5"
+            placeholder="eg: #photography in:2025">
+        </search>
+      </div>
+
+      <ul
+        class="tags text-primary list-group list-group-horizontal gap-1r align-items-baseline justify-content-center flex-wrap g-col-12 g-col-xl-6">
+        <li class="list-group-item">
+          <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#example" class="text-primary text-decoration-none fs-4 fw-bold">#example</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#meta" class="text-primary text-decoration-none fs-3 fw-bold">#meta</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#photography" class="text-primary text-decoration-none fs-4 fw-bold">#photography</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- region Sections -->
+    <div class="container-xxl d-flex flex-column gap-3r">
+
+      <!-- region Recent Posts -->
+      <!-- Hidden on Search page -->
+      <section class="recentPosts container-xxl d-none">
+        <h2 class="fw-bold mb-2r fs-2">Recent Posts</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Black and White -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/wolf-B81keRX3.png" class="card-img" alt="head of a wolf drawn in black and white">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                  </li>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/wolf-B81keRX3.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
+          </li>
+
+          <!-- endregion Black and White -->
+
+          <!-- region Things to do for this website -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/slinky-B4ag6VsA.png" class="card-img" alt="slinky on table">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/slinky-B4ag6VsA.png" class="h-100 w-auto rounded-end" alt="slinky on table">
+          </li>
+
+          <!-- endregion Things to do for this website-->
+
+          <!-- region Photos of some K9 glass -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/glass-house-C7qFmDqk.png" class="card-img" alt="a toy house made of glass">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#photography"
+                      class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#photography" class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/glass-house-C7qFmDqk.png" class="h-100 w-auto rounded-end" alt="a toy house made of glass">
+          </li>
+
+          <!-- endregion Photos of some K9 glass -->
+
+          <!-- region Resources for learning frontend development -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/glass-rainbow-BKZSukVU.png" class="card-img"
+                alt="light shining through glass, creating a rainbow effect">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/glass-rainbow-BKZSukVU.png" class="h-100 w-auto rounded-end"
+              alt="light shining through glass, creating a rainbow effect">
+          </li>
+
+          <!-- endregion Photos of some K9 glass -->
+        </ul>
+      </section>
+      <!-- endregion Recent Posts -->
+
+      <!-- region #first -->
+      <section class="recentPosts container-xxl" id="first">
+        <h2 class="fw-bold mb-2r fs-2">#first</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Black and White -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/wolf-B81keRX3.png" class="card-img" alt="head of a wolf drawn in black and white">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                  </li>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/wolf-B81keRX3.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
+          </li>
+
+          <!-- endregion Black and White -->
+      </section>
+      <!-- endregion #first -->
+
+      <!-- region #example -->
+      <section class="recentPosts container-xxl" id="example">
+        <h2 class="fw-bold mb-2r fs-2">#example</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Black and White -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/wolf-B81keRX3.png" class="card-img" alt="head of a wolf drawn in black and white">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                  </li>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/wolf-B81keRX3.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
+          </li>
+
+          <!-- endregion Black and White -->
+      </section>
+      <!-- endregion #example -->
+
+      <!-- region #meta -->
+      <section class="recentPosts container-xxl" id="meta">
+        <h2 class="fw-bold mb-2r fs-2">#meta</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+          <!-- region Things to do for this website -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/slinky-B4ag6VsA.png" class="card-img" alt="slinky on table">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/slinky-B4ag6VsA.png" class="h-100 w-auto rounded-end" alt="slinky on table">
+          </li>
+
+          <!-- endregion Things to do for this website-->
+        </ul>
+      </section>
+      <!-- endregion #meta -->
+
+      <!-- region #photography -->
+      <section class="recentPosts container-xxl" id="photography">
+        <h2 class="fw-bold mb-2r fs-2">#photography</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Photos of some K9 glass -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/glass-house-C7qFmDqk.png" class="card-img" alt="a toy house made of glass">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#photography"
+                      class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#photography" class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/glass-house-C7qFmDqk.png" class="h-100 w-auto rounded-end" alt="a toy house made of glass">
+          </li>
+
+          <!-- endregion Photos of some K9 glass -->
+        </ul>
+      </section>
+      <!-- endregion #photography -->
+
+      <!-- region Resources for learning web development -->
+      <section class="recentPosts container-xxl" id="web">
+        <h2 class="fw-bold mb-2r fs-2">#web</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+          <!-- region Resources for learning frontend development -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="./assets/glass-rainbow-BKZSukVU.png" class="card-img"
+                alt="light shining through glass, creating a rainbow effect">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="./assets/glass-rainbow-BKZSukVU.png" class="h-100 w-auto rounded-end"
+              alt="light shining through glass, creating a rainbow effect">
+          </li>
+
+          <!-- endregion Resources for learning web development -->
+        </ul>
+      </section>
+      <!-- endregion Web -->
+    </div>
+    <!-- endregion Sections -->
+
+  </main>
+
+  <footer id="Contact_Me" class="bg-body border-top border-primary border-8">
+    <form class="container-xxl py-2r">
+      <fieldset class="d-flex flex-column gap-1r">
+        <legend>
+          <h2 class="fw-bold fs-2">Contact Me</h2>
+        </legend>
+        <div class="grid">
+
+          <div class="g-col-12 g-col-md-6">
+            <label for="name_position" class="form-label fs-4 fw-bold">Name/Position</label>
+            <input type="text" id="name_position"
+              class="form-control neumorphism-m-inset min-block-size-input fw-bold border-4 fs-5"
+              placeholder="eg: Anonymous Reader">
+          </div>
+          <div class="g-col-12 g-col-md-6">
+            <label for="email" class="form-label fs-4 fw-bold">Email</label>
+            <input type="email" id="email"
+              class="form-control neumorphism-m-inset min-block-size-input fw-bold border-4 fs-5"
+              placeholder="eg: reader@example.com">
+          </div>
+          <div class="g-col-12">
+            <label for="message" class="form-label fs-4 fw-bold">Message</label>
+            <textarea id="message" rows="2"
+              class="form-control neumorphism-m-inset min-block-size-input fw-bold border-4 fs-5"
+              placeholder="eg: reader@example.com"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary bg-primary bg-gradient neumorphism-m align-self-center">Send Your
+          Message</button>
+      </fieldset>
+    </form>
+    <header class="siteHeader navbar bg-light bg-opacity-50 shadow-sm backdrop-filter-blur no-print">
+
+      <!-- Use relative links for GitHub Pages compatibility.
+       Add utility classes to get the desired styling without adding stuff to the navbar-brand class. -->
+      <a href="./" class="siteIdentity navbar-brand font-monospace d-flex gap-2 text-primary">
+        <img src="data:image/svg+xml,%3csvg%20width='1024'%20height='1024'%20viewBox='0%200%201024%201024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M512%200L1024%20512L512%201024L3.8147e-06%20512L512%200Z'%20fill='white'/%3e%3cpath%20d='M512%201024V512H1024L512%201024Z'%20fill='url(%23paint0_linear_17_1)'/%3e%3cpath%20d='M512%201024V512H0L512%201024Z'%20fill='url(%23paint1_linear_17_1)'/%3e%3cpath%20d='M512%201024V512H0L512%201024Z'%20fill='url(%23paint2_linear_17_1)'%20fill-opacity='0.5'/%3e%3cpath%20d='M512%200V512H0L512%200Z'%20fill='url(%23paint3_linear_17_1)'/%3e%3cpath%20d='M512%200V512H0L512%200Z'%20fill='url(%23paint4_linear_17_1)'%20fill-opacity='0.5'/%3e%3cpath%20d='M512%200V512H1024L512%200Z'%20fill='url(%23paint5_linear_17_1)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_17_1'%20x1='-8.00002'%20y1='1536'%20x2='1024'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0.304355'%20stop-color='%23C879F6'/%3e%3cstop%20offset='1'%20stop-color='%23CE87F7'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_17_1'%20x1='0'%20y1='1024'%20x2='512'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0.111899'%20stop-color='%23804DE5'/%3e%3cstop%20offset='0.28528'%20stop-color='%23804DE5'%20stop-opacity='0.9'/%3e%3cstop%20offset='1'%20stop-color='%23804DE5'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint2_linear_17_1'%20x1='1024'%20y1='-1.52588e-05'%20x2='6.10352e-05'%20y2='2048'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0.295332'%20stop-color='%23804DE6'/%3e%3cstop%20offset='0.49914'%20stop-color='%23804DE6'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint3_linear_17_1'%20x1='-1.52588e-05'%20y1='512'%20x2='512'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23AE75F0'/%3e%3cstop%20offset='1'%20stop-color='%23AE75F0'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint4_linear_17_1'%20x1='1024'%20y1='0'%20x2='-1.52588e-05'%20y2='512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23AE75F0'/%3e%3cstop%20offset='1'%20stop-color='%23AE75F0'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint5_linear_17_1'%20x1='512'%20y1='512'%20x2='1024'%20y2='-512'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23F0C2FF'/%3e%3cstop%20offset='1'%20stop-color='%23F2CCFF'%20stop-opacity='0.2'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="octahedron with gradients" width="32">
+        Aquaticat
+      </a>
+      <nav class="siteLinks">
+        <ul class="navbar-nav flex-row gap-3">
+          <li class="nav-item flex-row">
+            <a class="siteLink__search nav-link active filter-drop-shadow-nav-link" href="./search">
+              Search
+              <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_4134_372'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='24'%20height='24'%3e%3crect%20width='24'%20height='24'%20fill='%23181322'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_4134_372)'%3e%3cpath%20d='M19.6%2021L13.3%2014.7C12.8%2015.1%2012.225%2015.4167%2011.575%2015.65C10.925%2015.8833%2010.2333%2016%209.5%2016C7.68333%2016%206.14583%2015.3708%204.8875%2014.1125C3.62917%2012.8542%203%2011.3167%203%209.5C3%207.68333%203.62917%206.14583%204.8875%204.8875C6.14583%203.62917%207.68333%203%209.5%203C11.3167%203%2012.8542%203.62917%2014.1125%204.8875C15.3708%206.14583%2016%207.68333%2016%209.5C16%2010.2333%2015.8833%2010.925%2015.65%2011.575C15.4167%2012.225%2015.1%2012.8%2014.7%2013.3L21%2019.6L19.6%2021ZM9.5%2014C10.75%2014%2011.8125%2013.5625%2012.6875%2012.6875C13.5625%2011.8125%2014%2010.75%2014%209.5C14%208.25%2013.5625%207.1875%2012.6875%206.3125C11.8125%205.4375%2010.75%205%209.5%205C8.25%205%207.1875%205.4375%206.3125%206.3125C5.4375%207.1875%205%208.25%205%209.5C5%2010.75%205.4375%2011.8125%206.3125%2012.6875C7.1875%2013.5625%208.25%2014%209.5%2014Z'%20fill='%23181322'/%3e%3c/g%3e%3c/svg%3e" alt="">
+            </a>
+          </li>
+          <li class="nav-item flex-row">
+            <a class="siteLink__search nav-link" href="./about">
+              About
+              <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_4134_668'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='24'%20height='24'%3e%3crect%20width='24'%20height='24'%20fill='%231C1B1F'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_4134_668)'%3e%3cpath%20d='M12%2012C10.9%2012%209.95833%2011.6083%209.175%2010.825C8.39167%2010.0417%208%209.1%208%208C8%206.9%208.39167%205.95833%209.175%205.175C9.95833%204.39167%2010.9%204%2012%204C13.1%204%2014.0417%204.39167%2014.825%205.175C15.6083%205.95833%2016%206.9%2016%208C16%209.1%2015.6083%2010.0417%2014.825%2010.825C14.0417%2011.6083%2013.1%2012%2012%2012ZM4%2020V17.2C4%2016.6333%204.14583%2016.1125%204.4375%2015.6375C4.72917%2015.1625%205.11667%2014.8%205.6%2014.55C6.63333%2014.0333%207.68333%2013.6458%208.75%2013.3875C9.81667%2013.1292%2010.9%2013%2012%2013C13.1%2013%2014.1833%2013.1292%2015.25%2013.3875C16.3167%2013.6458%2017.3667%2014.0333%2018.4%2014.55C18.8833%2014.8%2019.2708%2015.1625%2019.5625%2015.6375C19.8542%2016.1125%2020%2016.6333%2020%2017.2V20H4ZM6%2018H18V17.2C18%2017.0167%2017.9542%2016.85%2017.8625%2016.7C17.7708%2016.55%2017.65%2016.4333%2017.5%2016.35C16.6%2015.9%2015.6917%2015.5625%2014.775%2015.3375C13.8583%2015.1125%2012.9333%2015%2012%2015C11.0667%2015%2010.1417%2015.1125%209.225%2015.3375C8.30833%2015.5625%207.4%2015.9%206.5%2016.35C6.35%2016.4333%206.22917%2016.55%206.1375%2016.7C6.04583%2016.85%206%2017.0167%206%2017.2V18ZM12%2010C12.55%2010%2013.0208%209.80417%2013.4125%209.4125C13.8042%209.02083%2014%208.55%2014%208C14%207.45%2013.8042%206.97917%2013.4125%206.5875C13.0208%206.19583%2012.55%206%2012%206C11.45%206%2010.9792%206.19583%2010.5875%206.5875C10.1958%206.97917%2010%207.45%2010%208C10%208.55%2010.1958%209.02083%2010.5875%209.4125C10.9792%209.80417%2011.45%2010%2012%2010Z'%20fill='%23181322'/%3e%3c/g%3e%3c/svg%3e" alt="">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </footer>
+</body>
+
+</html>

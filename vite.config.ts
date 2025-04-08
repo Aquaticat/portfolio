@@ -1,7 +1,14 @@
+import {
+  dirname,
+  resolve,
+} from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import type { UserConfig } from 'vite';
 
-import pluginPurgeCss from "vite-plugin-purgecss-updated-v5";
+import pluginPurgeCss from 'vite-plugin-purgecss-updated-v5';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   // root: import.meta.dir,
@@ -15,7 +22,7 @@ export default defineConfig({
       scss: {
         quietDeps: true,
         silenceDeprecations: ['import'],
-      }
+      },
     },
     devSourcemap: true,
   },
@@ -29,6 +36,14 @@ export default defineConfig({
 
     // For deploying to GitHub Pages
     outDir: 'docs',
+
+    rollupOptions: {
+      input: {
+        index: resolve(__dirname, 'index.html'),
+        search: resolve(__dirname, 'search.html'),
+        about: resolve(__dirname, 'about.html'),
+      },
+    },
   },
 
   plugins: [pluginPurgeCss()],
