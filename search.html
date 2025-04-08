@@ -7,6 +7,7 @@
   <title>Search | Aquaticat</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/gutenberg.min.css" media="print">
+  <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
 
   <!-- Font preloading -->
   <link rel="preload" href="assets/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
@@ -46,44 +47,82 @@
     </nav>
   </header>
 
-  <main>
+  <main class="mb-3r">
 
     <!-- Set correct padding.
      Modify Bootstrap Sass map to add the right padding levels. -->
-    <section class="hero d-flex flex-column align-items-center px-3 py-5 py-xl-6r">
+    <section class="hero d-flex flex-column align-items-center px-3 py-5 py-xl-6r gap-2r">
       <h1 class="max-inline-size-text min-inline-size-text fst-italic fw-extra-bold fs-1 text-center">Dive
         <span class="highlight text-primary">into</span> the Archives
       </h1>
-      <search class="">
+      <search class="container-xxl">
         <label for="search" class="form-label fs-4 fw-bold">Search for tags, content...</label>
         <input type="search" id="search"
           class="form-control neumorphism-m-inset min-block-size-input fw-bold border-4 fs-5"
           placeholder="eg: #photography in:2025">
       </search>
-      <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+      <ul
+        class="tags text-primary list-group list-group-horizontal gap-1r align-items-baseline justify-content-center flex-wrap">
         <li class="list-group-item">
           <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
         </li>
         <li class="list-group-item">
-          <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+          <a href="./search#example" class="text-primary text-decoration-none fs-4 fw-bold">#example</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#meta" class="text-primary text-decoration-none fs-3 fw-bold">#meta</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#photography" class="text-primary text-decoration-none fs-4 fw-bold">#photography</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
         </li>
       </ul>
     </section>
-    <section class="recentPosts container-xxl">
-      <h2 class="fw-bold mb-2r fs-2">Recent Posts</h2>
 
-      <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
-      <ul class="grid p-0">
+    <!-- region Sections -->
+    <div class="container-xxl d-flex flex-column gap-3r">
 
-        <!-- region Black and White -->
-        <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
-          <div class="card-body">
-            <h3 class="card-title fs-3">Black and White</h3>
-            <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
-          </div>
-          <div class="overlaidImage position-relative">
-            <img src="images/wolf.png" class="card-img" alt="head of a wolf drawn in black and white">
-            <div class="card-img-overlay bg-gradient">
+      <!-- region Recent Posts -->
+      <!-- Hidden on Search page -->
+      <section class="recentPosts container-xxl d-none">
+        <h2 class="fw-bold mb-2r fs-2">Recent Posts</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Black and White -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="images/wolf.png" class="card-img" alt="head of a wolf drawn in black and white">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                  </li>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
               <ul class="tags text-primary list-group list-group-horizontal gap-1r">
                 <li class="list-group-item">
                   <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
@@ -98,46 +137,46 @@
                 <time datetime="2025-02-01">Feb 01, 2025</time>
               </div>
             </div>
-          </div>
-        </li>
+            <img src="images/wolf.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
+          </li>
 
-        <li
-          class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
-          <div class="card-body py-4">
-            <h3 class="card-title fs-3">Black and White</h3>
-            <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
-            <ul class="tags text-primary list-group list-group-horizontal gap-1r">
-              <li class="list-group-item">
-                <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
-              </li>
-              <li class="list-group-item">
-                <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
-              </li>
-            </ul>
-            <div class="times text-secondary">
-              <time datetime="2025-02-01">Feb 01, 2025</time>
-              -
-              <time datetime="2025-02-01">Feb 01, 2025</time>
+          <!-- endregion Black and White -->
+
+          <!-- region Things to do for this website -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
             </div>
-          </div>
-          <img src="images/wolf.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
-        </li>
+            <div class="overlaidImage position-relative">
+              <img src="images/slinky.png" class="card-img" alt="slinky on table">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        <!-- endregion Black and White -->
-
-        <!-- region Things to do for this website -->
-        <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
-          <div class="card-body">
-            <h3 class="card-title fs-3">Things to do for this website</h3>
-            <p class="card-text">Things to do and to fix for this website. This website was hastily constructed. Efforts
-              need to be invested to polish it.</p>
-          </div>
-          <div class="overlaidImage position-relative">
-            <img src="images/slinky.png" class="card-img" alt="slinky on table">
-            <div class="card-img-overlay bg-gradient">
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
               <ul class="tags text-primary list-group list-group-horizontal gap-1r">
                 <li class="list-group-item">
                   <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </li>
               </ul>
               <div class="times text-secondary">
                 <time datetime="2025-02-01">Feb 01, 2025</time>
@@ -145,43 +184,43 @@
                 <time datetime="2025-02-01">Feb 01, 2025</time>
               </div>
             </div>
-          </div>
-        </li>
+            <img src="images/slinky.png" class="h-100 w-auto rounded-end" alt="slinky on table">
+          </li>
 
-        <li
-          class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
-          <div class="card-body py-4">
-            <h3 class="card-title fs-3">Things to do for this website</h3>
-            <p class="card-text">Things to do and to fix for this website. This website was hastily constructed. Efforts
-              need to be invested to polish it.</p>
-            <ul class="tags text-primary list-group list-group-horizontal gap-1r">
-              <li class="list-group-item">
-                <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
-              </li>
-            </ul>
-            <div class="times text-secondary">
-              <time datetime="2025-02-01">Feb 01, 2025</time>
-              -
-              <time datetime="2025-02-01">Feb 01, 2025</time>
+          <!-- endregion Things to do for this website-->
+
+          <!-- region Photos of some K9 glass -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
             </div>
-          </div>
-          <img src="images/slinky.png" class="h-100 w-auto rounded-end" alt="slinky on table">
-        </li>
+            <div class="overlaidImage position-relative">
+              <img src="images/glass-house.png" class="card-img" alt="a toy house made of glass">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#photography"
+                      class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        <!-- endregion Things to do for this website-->
-
-        <!-- region Photos of some K9 glass -->
-        <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
-          <div class="card-body">
-            <h3 class="card-title fs-3">Photos of some K9 glass</h3>
-            <p class="card-text">The transparency creates a nice effect.</p>
-          </div>
-          <div class="overlaidImage position-relative">
-            <img src="images/glass-house.png" class="card-img" alt="a toy house made of glass">
-            <div class="card-img-overlay bg-gradient">
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
               <ul class="tags text-primary list-group list-group-horizontal gap-1r">
                 <li class="list-group-item">
                   <a href="./search#photography" class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </li>
               </ul>
               <div class="times text-secondary">
                 <time datetime="2025-02-01">Feb 01, 2025</time>
@@ -189,44 +228,45 @@
                 <time datetime="2025-02-01">Feb 01, 2025</time>
               </div>
             </div>
-          </div>
-        </li>
+            <img src="images/glass-house.png" class="h-100 w-auto rounded-end" alt="a toy house made of glass">
+          </li>
 
-        <li
-          class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
-          <div class="card-body py-4">
-            <h3 class="card-title fs-3">Photos of some K9 glass</h3>
-            <p class="card-text">The transparency creates a nice effect.</p>
-            <ul class="tags text-primary list-group list-group-horizontal gap-1r">
-              <li class="list-group-item">
-                <a href="./search#photography" class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
-              </li>
-            </ul>
-            <div class="times text-secondary">
-              <time datetime="2025-02-01">Feb 01, 2025</time>
-              -
-              <time datetime="2025-02-01">Feb 01, 2025</time>
+          <!-- endregion Photos of some K9 glass -->
+
+          <!-- region Resources for learning frontend development -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
             </div>
-          </div>
-          <img src="images/glass-house.png" class="h-100 w-auto rounded-end" alt="a toy house made of glass">
-        </li>
+            <div class="overlaidImage position-relative">
+              <img src="images/glass-rainbow.png" class="card-img"
+                alt="light shining through glass, creating a rainbow effect">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        <!-- endregion Photos of some K9 glass -->
-
-        <!-- region Resources for learning frontend development -->
-        <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
-          <div class="card-body">
-            <h3 class="card-title fs-3">Resources for learning frontend development</h3>
-            <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
-              more.</p>
-          </div>
-          <div class="overlaidImage position-relative">
-            <img src="images/glass-rainbow.png" class="card-img"
-              alt="light shining through glass, creating a rainbow effect">
-            <div class="card-img-overlay bg-gradient">
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
               <ul class="tags text-primary list-group list-group-horizontal gap-1r">
                 <li class="list-group-item">
                   <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </li>
               </ul>
               <div class="times text-secondary">
                 <time datetime="2025-02-01">Feb 01, 2025</time>
@@ -234,33 +274,301 @@
                 <time datetime="2025-02-01">Feb 01, 2025</time>
               </div>
             </div>
-          </div>
-        </li>
+            <img src="images/glass-rainbow.png" class="h-100 w-auto rounded-end"
+              alt="light shining through glass, creating a rainbow effect">
+          </li>
 
-        <li
-          class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
-          <div class="card-body py-4">
-            <h3 class="card-title fs-3">Resources for learning frontend development</h3>
-            <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
-              more.</p>
-            <ul class="tags text-primary list-group list-group-horizontal gap-1r">
-              <li class="list-group-item">
-                <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
-              </li>
-            </ul>
-            <div class="times text-secondary">
-              <time datetime="2025-02-01">Feb 01, 2025</time>
-              -
-              <time datetime="2025-02-01">Feb 01, 2025</time>
+          <!-- endregion Photos of some K9 glass -->
+        </ul>
+      </section>
+      <!-- endregion Recent Posts -->
+
+      <!-- region #first -->
+      <section class="recentPosts container-xxl" id="first">
+        <h2 class="fw-bold mb-2r fs-2">#first</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Black and White -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
             </div>
-          </div>
-          <img src="images/glass-rainbow.png" class="h-100 w-auto rounded-end"
-            alt="light shining through glass, creating a rainbow effect">
-        </li>
+            <div class="overlaidImage position-relative">
+              <img src="images/wolf.png" class="card-img" alt="head of a wolf drawn in black and white">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                  </li>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        <!-- endregion Photos of some K9 glass -->
-      </ul>
-    </section>
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="images/wolf.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
+          </li>
+
+          <!-- endregion Black and White -->
+      </section>
+      <!-- endregion #first -->
+
+      <!-- region #example -->
+      <section class="recentPosts container-xxl" id="example">
+        <h2 class="fw-bold mb-2r fs-2">#example</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Black and White -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="images/wolf.png" class="card-img" alt="head of a wolf drawn in black and white">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                  </li>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Black and White</h3>
+              <p class="card-text">Pure black and white images or designs just have that nice feel to them.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="images/wolf.png" class="h-100 w-auto rounded-end" alt="head of a wolf drawn in black and white">
+          </li>
+
+          <!-- endregion Black and White -->
+      </section>
+      <!-- endregion #example -->
+
+      <!-- region #meta -->
+      <section class="recentPosts container-xxl" id="meta">
+        <h2 class="fw-bold mb-2r fs-2">#meta</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+          <!-- region Things to do for this website -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="images/slinky.png" class="card-img" alt="slinky on table">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Things to do for this website</h3>
+              <p class="card-text">Things to do and to fix for this website. This website was hastily constructed.
+                Efforts
+                need to be invested to polish it.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#meta" class="text-primary text-decoration-none fs-5 fw-bold">#meta</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="images/slinky.png" class="h-100 w-auto rounded-end" alt="slinky on table">
+          </li>
+
+          <!-- endregion Things to do for this website-->
+        </ul>
+      </section>
+      <!-- endregion #meta -->
+
+      <!-- region #photography -->
+      <section class="recentPosts container-xxl" id="photography">
+        <h2 class="fw-bold mb-2r fs-2">#photography</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+
+          <!-- region Photos of some K9 glass -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="images/glass-house.png" class="card-img" alt="a toy house made of glass">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#photography"
+                      class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Photos of some K9 glass</h3>
+              <p class="card-text">The transparency creates a nice effect.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#photography" class="text-primary text-decoration-none fs-5 fw-bold">#photography</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="images/glass-house.png" class="h-100 w-auto rounded-end" alt="a toy house made of glass">
+          </li>
+
+          <!-- endregion Photos of some K9 glass -->
+        </ul>
+      </section>
+      <!-- endregion #photography -->
+
+      <!-- region Resources for learning web development -->
+      <section class="recentPosts container-xxl" id="web">
+        <h2 class="fw-bold mb-2r fs-2">#web</h2>
+
+        <!-- Using experimental CSS grid: https://getbootstrap.com/docs/5.3/layout/css-grid/ -->
+        <ul class="grid p-0">
+          <!-- region Resources for learning frontend development -->
+          <li class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-sm-none">
+            <div class="card-body">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
+            </div>
+            <div class="overlaidImage position-relative">
+              <img src="images/glass-rainbow.png" class="card-img"
+                alt="light shining through glass, creating a rainbow effect">
+              <div class="card-img-overlay bg-gradient">
+                <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                  <li class="list-group-item">
+                    <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </ul>
+                <div class="times text-secondary">
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                  -
+                  <time datetime="2025-02-01">Feb 01, 2025</time>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="recentPost post card backdrop-filter-blur neumorphism-m g-col-12 g-col-lg-6 d-none d-sm-flex flex-row min-block-size-card">
+            <div class="card-body py-4">
+              <h3 class="card-title fs-3">Resources for learning frontend development</h3>
+              <p class="card-text">Books, articles, people. On HTML, CSS, JavaScript, functional programming, a11y, and
+                more.</p>
+              <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+                <li class="list-group-item">
+                  <a href="./search#web" class="text-primary text-decoration-none fs-5 fw-bold">#web</a>
+                </li>
+              </ul>
+              <div class="times text-secondary">
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+                -
+                <time datetime="2025-02-01">Feb 01, 2025</time>
+              </div>
+            </div>
+            <img src="images/glass-rainbow.png" class="h-100 w-auto rounded-end"
+              alt="light shining through glass, creating a rainbow effect">
+          </li>
+
+          <!-- endregion Resources for learning web development -->
+        </ul>
+      </section>
+      <!-- endregion Web -->
+    </div>
+    <!-- endregion Sections -->
+
   </main>
 
   <footer id="Contact_Me" class="bg-body border-top border-primary border-8">

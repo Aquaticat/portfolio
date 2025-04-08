@@ -52,8 +52,8 @@
   --subtle-rgb:118, 112, 144;
   --subtle: rgb(var(--subtle-rgb));
   --subtle-50: rgba(var(--subtle-rgb), 0.5);
-  --primary-rgb:128,78,229;
-  --primary: rgb(var(--primary-rgb)); /* #804EE5 */
+  --primary-rgb:121,64,226;
+  --primary: rgb(var(--primary-rgb)); /* #7940e2 */
   --primary-50-on-white: #bda2f1;
 
   --blur-m: 0.5rem;
