@@ -178,13 +178,36 @@
 }
 
 .linkedinLogo {
-  background-image: url('../images/linkedin.png');
+  @media (max-resolution: 2x) {
+    background-image: url('../images/linkedin512.avif');
+  }
+  @media (max-resolution: 1x) {
+    background-image: url('../images/linkedin256.avif');
+  }
+
+  background-image: url('../images/linkedin.avif');
 }
 
 .blueskyLogo {
-  background-image: url('../images/bluesky.png');
+  @media (max-resolution: 2x) {
+    background-image: url('../images/bluesky512.avif');
+  }
+
+  @media (max-resolution: 1x) {
+    background-image: url('../images/bluesky256.avif');
+  }
+
+  background-image: url('../images/bluesky.avif');
 }
 
 .dribbbleRender {
-  background-image: url('../images/dribbble.png');
+  @media (max-resolution: 2x) {
+    background-image: url('../images/dribbble512.avif');
+  }
+
+  @media (max-resolution: 1x) {
+    background-image: url('../images/dribbble256.avif');
+  }
+
+  background-image: url('../images/dribbble.avif');
 }
