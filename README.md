@@ -19,6 +19,10 @@ So the page prints correctly.
 
 ### [Monaspace Neon](https://monaspace.githubnext.com)
 
+### Images
+
+Branding assets downloaded directly from LinkedIn, Bluesky, and Dribbble.
+
 ## To build & run locally
 
 ### Install [Bun](https://bun.sh):
