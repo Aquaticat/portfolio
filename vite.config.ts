@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import type { UserConfig } from 'vite';
 
+import pluginPurgeCss from "vite-plugin-purgecss-updated-v5";
 
 export default defineConfig({
   // root: import.meta.dir,
@@ -25,5 +26,7 @@ export default defineConfig({
     target: ['chrome132', 'firefox138'],
     cssMinify: 'lightningcss',
     sourcemap: true,
-  }
+  },
+
+  plugins: [pluginPurgeCss()],
 }) satisfies UserConfig as UserConfig;

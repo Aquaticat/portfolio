@@ -6,19 +6,45 @@
 @import "bootstrap/scss/variables-dark";
 
 /*  (0: 0, 1: 0.25rem, 2: 0.5rem, 3: 1rem, 4: 1.5rem, 5: 3rem) */
-$spacers: map.merge(
-  $spacers,
-  (
-    1r: 1rem,
-    2r: 2rem,
-    3r: 3rem,
-    4r: 4rem,
-    5r: 5rem,
-    6r: 6rem,
-    7r: 7rem,
-    8r: 8rem,
+$spacers: map.merge($spacers,
+    (1r: 1rem,
+      2r: 2rem,
+      3r: 3rem,
+      4r: 4rem,
+      5r: 5rem,
+      6r: 6rem,
+      7r: 7rem,
+      8r: 8rem,
     ),
+  );
+
+$font-sizes: (
+  1: 3rem,
+  2: 2.5rem,
+  3: 2rem,
+  4: 1.5rem,
+  5: 1.25rem,
+  6: 1.125rem,
+  0: 1rem,
 );
+
+$border-width: 0.0625rem;
+
+$border-widths: (
+  1: 0.0625rem,
+  2: 0.125rem,
+  3: 0.1875rem,
+  4: 0.25rem,
+  5: 0.3125rem,
+  6: 0.375rem,
+  7: 0.4375rem,
+  8: 0.5rem,
+);
+
+$primary: #804ee5;
+
+$enable-grid-classes: false;
+$enable-cssgrid: true;
 
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
@@ -29,88 +55,79 @@ $spacers: map.merge(
 $enable-important-utilities: false;
 
 // Had to extend Bootstrap api to constrain characters per line.
-$utilities: map.merge(
-  $utilities,
-  (
-    "max-inline-size": (
-      property: max-inline-size,
-      class: max-inline-size,
-      values: (
-        text: 32rem,
-        ui: 80rem,
-      )
-    ),
-    "max-inline-size-var": (
-      property: max-inline-size,
-      class: max-inline-size-var,
-      css-variable-name: max-inline-size,
-      values: (
-        text: 32rem,
-        ui: 80rem,
+$utilities: map.merge($utilities,
+    ("max-inline-size": (property: max-inline-size,
+        class: max-inline-size,
+        values: (text: 32rem,
+          ui: 80rem,
+        )),
+      "max-inline-size-var": (property: max-inline-size,
+        class: max-inline-size-var,
+        css-variable-name: max-inline-size,
+        values: (text: 32rem,
+          ui: 80rem,
+        ),
+        css-var: true,
       ),
-      css-var: true,
-    ),
-    "min-inline-size": (
-      property: min-inline-size,
-      class: min-inline-size,
-      values: (
-        text: 16rem,
-        interactive: 3rem,
-      )
-    ),
-    "min-inline-size-var": (
-      property: min-inline-size,
-      class: min-inline-size-var,
-      css-variable-name: min-inline-size,
-      values: (
-        text: 16rem,
-        interactive: 3rem,
+      "min-inline-size": (property: min-inline-size,
+        class: min-inline-size,
+        values: (text: 16rem,
+          interactive: 3rem,
+        )),
+      "min-inline-size-var": (property: min-inline-size,
+        class: min-inline-size-var,
+        css-variable-name: min-inline-size,
+        values: (text: 16rem,
+          interactive: 3rem,
+        ),
+        css-var: true,
       ),
-      css-var: true,
-    ),
-    "min-block-size": (
-      property: min-block-size,
-      class: min-block-size,
-      values: (
-        interactive: 3rem,
-      )
-    ),
-    "min-block-size-var": (
-      property: min-block-size,
-      class: min-block-size-var,
-      css-variable-name: min-block-size,
-      values: (
-        interactive: 3rem,
+      "min-block-size": (property: min-block-size,
+        class: min-block-size,
+        values: (interactive: 3rem,
+          input: 4rem,
+          card: 16rem,
+        )),
+      "min-block-size-var": (property: min-block-size,
+        class: min-block-size-var,
+        css-variable-name: min-block-size,
+        values: (interactive: 3rem,
+          input: 4rem,
+          card: 16rem,
+        ),
+        css-var: true,
       ),
-      css-var: true,
-    ),
-    "font-weight": map.merge(
-      map.get($utilities, "font-weight"),
-      (
-        values: map.merge(
-          map.get(map.get($utilities, "font-weight"), "values"),
-          (extra-bold: 800),
-        )
-      )
-    ),
-    "neumorphism": (
-      property: box-shadow,
-      class: neumorphism,
-      values: (
-        m: (var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter), var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--light-darker)),
-      )
-    ),
-    "neumorphism-var": (
-      property: box-shadow,
-      class: neumorphism-var,
-      css-variable-name: neumorphism,
-      values: (
-        m: (var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter), var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--light-darker)),
+      "max-block-size": (property: max-block-size,
+        class: max-block-size,
+        values: (img: 16rem,
+        )),
+      "max-block-size-var": (property: max-block-size,
+        class: max-block-size-var,
+        css-variable-name: max-block-size,
+        values: (img: 16rem,
+        ),
+        css-var: true,
       ),
-      css-var: true,
-    ),
-  ),
-);
+      "font-weight": map.merge(map.get($utilities, "font-weight"),
+        (values: map.merge(map.get(map.get($utilities, "font-weight"), "values"),
+            (extra-bold: 800),
+          ))),
+      "neumorphism": (property: box-shadow,
+        class: neumorphism,
+        values: (m: (var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter), var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--light-darker)),
+
+          m-inset: (var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--dark-10, rgba(4, 2, 11, 0.10)) inset, var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter, #F2ECFF) inset))),
+      "neumorphism-var": (property: box-shadow,
+        class: neumorphism-var,
+        css-variable-name: neumorphism,
+        values: (m: (var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter), var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--light-darker)),
+          m-inset: (var(--blur-m, 8px) var(--blur-m, 8px) var(--blur-l, 16px) 0px var(--dark-10, rgba(4, 2, 11, 0.10)) inset, var(--blur-m-neg, -8px) var(--blur-m-neg, -8px) var(--blur-l, 16px) 0px var(--light-lighter, #F2ECFF) inset)),
+        css-var: true,
+      ),
+      "filter-drop-shadow": (property: filter,
+        class: filter-drop-shadow,
+        values: (nav-link: drop-shadow(0px 0px var(--blur-m, 8px) var(--primary, #804EE5))))),
+  );
 
 @import "bootstrap/scss/utilities/api";
 @import "bootstrap/scss/bootstrap";

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aquaticat - Changing the world, one design at a time.</title>
+  <title>Search | Aquaticat</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/gutenberg.min.css" media="print">
 
@@ -31,7 +31,7 @@
     <nav class="siteLinks">
       <ul class="navbar-nav flex-row gap-3">
         <li class="nav-item flex-row">
-          <a class="siteLink__search nav-link" href="./search">
+          <a class="siteLink__search nav-link active filter-drop-shadow-nav-link" href="./search">
             Search
             <img src="assets/search.svg" alt="">
           </a>
@@ -51,19 +51,23 @@
     <!-- Set correct padding.
      Modify Bootstrap Sass map to add the right padding levels. -->
     <section class="hero d-flex flex-column align-items-center px-3 py-5 py-xl-6r">
-      <h1 class="max-inline-size-text min-inline-size-text fst-italic fw-extra-bold fs-1 text-center">Changing the
-        World,<br>One
-        <span class="highlight text-primary">Design</span> at a Time
+      <h1 class="max-inline-size-text min-inline-size-text fst-italic fw-extra-bold fs-1 text-center">Dive
+        <span class="highlight text-primary">into</span> the Archives
       </h1>
-      <p class="max-inline-size-text min-inline-size-text">I am an aspiring designer who is passionate about UI/UX
-        Design
-        and Web
-        Development. Aside
-        from that, I’m also
-        involved in some social causes. I believe in the power of designs to change the world. I hope to have more
-        examples to write here soon.</p>
-      <a href="#Contact_Me" class="btn btn-primary bg-primary bg-gradient neumorphism-m">Contact
-        Me</a>
+      <search class="">
+        <label for="search" class="form-label fs-4 fw-bold">Search for tags, content...</label>
+        <input type="search" id="search"
+          class="form-control neumorphism-m-inset min-block-size-input fw-bold border-4 fs-5"
+          placeholder="eg: #photography in:2025">
+      </search>
+      <ul class="tags text-primary list-group list-group-horizontal gap-1r">
+        <li class="list-group-item">
+          <a href="./search#first" class="text-primary text-decoration-none fs-5 fw-bold">#first</a>
+        </li>
+        <li class="list-group-item">
+          <a href="./search#example" class="text-primary text-decoration-none fs-5 fw-bold">#example</a>
+        </li>
+      </ul>
     </section>
     <section class="recentPosts container-xxl">
       <h2 class="fw-bold mb-2r fs-2">Recent Posts</h2>
@@ -301,7 +305,7 @@
       <nav class="siteLinks">
         <ul class="navbar-nav flex-row gap-3">
           <li class="nav-item flex-row">
-            <a class="siteLink__search nav-link" href="./search">
+            <a class="siteLink__search nav-link active filter-drop-shadow-nav-link" href="./search">
               Search
               <img src="assets/search.svg" alt="">
             </a>

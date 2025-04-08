@@ -42,3 +42,5 @@ bun i
 ```sh
 bun run vite
 ```
+
+*I've never hated web dev so much.*
