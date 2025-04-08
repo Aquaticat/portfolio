@@ -23,7 +23,7 @@ So the page prints correctly.
 
 Branding assets downloaded directly from LinkedIn, Bluesky, and Dribbble.
 
-## To build & run locally
+## To run locally
 
 ### Install [Bun](https://bun.sh):
 
@@ -52,5 +52,23 @@ bun run vite
 ```
 
 *I've never hated web dev so much.*
+
+## To deploy
+
+### Run vite build
+
+```sh
+bun run vite build
+```
+
+### Commit & Push
+
+```sh
+git add .
+
+git commit -m 'fix build'
+
+git push
+```
 
 ## [Figma Design Share](https://www.figma.com/design/kbocALxI9u9E65K8XuFvvM/portfolio-2025APR08?node-id=0-1\&m=dev)
