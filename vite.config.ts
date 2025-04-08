@@ -26,6 +26,9 @@ export default defineConfig({
     target: ['chrome132', 'firefox138'],
     cssMinify: 'lightningcss',
     sourcemap: true,
+
+    // For deploying to GitHub Pages
+    outDir: 'docs',
   },
 
   plugins: [pluginPurgeCss()],
