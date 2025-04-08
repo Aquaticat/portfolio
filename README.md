@@ -141,7 +141,7 @@ DONE If you choose to use web fonts, which is encouraged, use only fonts that yo
 
 DONE All text, images, illustrations, videos, or any other asset, must be your own where possible. If you are using any stock images please identify them, in the README.md file. No copyrighted materials.
 
-NOT YET Make sure that any images and illustrations are optimized, and that they respond (grow and shrink) to the layout. Create a minimum of two sizes of your images and utilize tag and srcset, sizes, and media attributes as needed.
+DONE Make sure that any images and illustrations are optimized, and that they respond (grow and shrink) to the layout. Create a minimum of two sizes of your images and utilize tag and srcset, sizes, and media attributes as needed.
 
 DONE Create a README.md file and save it at the root of your site. In the readme file add information assuming that you are asked to explain the following about your portfolio in an interview, "Tell us about your process, challenges you faced during development and how you overcame those changes. What have you learned by creating your web portfolio?" Finally, include a list of any assets or resources you used that was not your own, including any frameworks, libraries, plugins, fonts, or images. You will need to use the markdown language to format your README.md file.
 

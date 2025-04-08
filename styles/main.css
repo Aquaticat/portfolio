@@ -151,11 +151,8 @@
 
 .card-title {
   display: -webkit-box;
-  display: box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: block-axis;
-  box-orient: block-axis;
 }
 
 .card-text {
